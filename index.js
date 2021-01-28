@@ -1,7 +1,10 @@
 const Discord = require('discord.js');
 const botsettings = require('./botsettings.json');
+const mongoose = require('mongoose');
 
-const bot = new Discord.Client({disableEveryone: true});
+const bot = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
+
+mongoose.connect(process.env.MONGO_URI)
 
 // Respond to messages
 bot.on('message', (message) => {

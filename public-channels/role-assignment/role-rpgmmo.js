@@ -12,7 +12,7 @@ module.exports = (client) => {
     ESO: 'Elder Scrolls Online',
     Cyberpunk2077: 'Cyberpunk 2077',
     EliteDangerous: 'Elite Dangerous',
-    DarkSouls : 'Dark Souls ',
+    DarkSouls : 'Dark Souls',
   }
 
   const reactions = []

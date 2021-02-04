@@ -1,10 +1,41 @@
 const Discord = require('discord.js');
 const botsettings = require('./botsettings.json');
 
-const bot = new Discord.Client({disableEveryone: true});
+const client = new Discord.Client({disableEveryone: true});
+
+// Initialize Public Channel Text
+const roleClaim1 = require('./public-channels/role-assignment/role-instructions')
+const roleClaim2 = require('./public-channels/role-assignment/role-shooter')
+const roleClaim3 = require('./public-channels/role-assignment/role-shooter2')
+const roleClaim4 = require('./public-channels/role-assignment/role-battleroyal')
+const roleClaim5 = require('./public-channels/role-assignment/role-survival')
+const roleClaim6 = require('./public-channels/role-assignment/role-rpgmmo')
+const roleClaim7 = require('./public-channels/role-assignment/role-strategy')
+const roleClaim8 = require('./public-channels/role-assignment/role-sports')
+const roleClaim9 = require('./public-channels/role-assignment/role-miscellaneous')
+const roleClaim10 = require('./public-channels/role-assignment/role-footer')
+
+const communityLinks = require('./public-channels/community-links/content-links')
+
+client.on('ready', () => {
+  console.log('The client is ready!')
+
+  roleClaim1(client)
+  roleClaim2(client)
+  roleClaim3(client)
+  roleClaim4(client)
+  roleClaim5(client)
+  roleClaim6(client)
+  roleClaim7(client)
+  roleClaim8(client)
+  roleClaim9(client)
+  roleClaim10(client)
+
+  communityLinks(client)
+})
 
 // Respond to messages
-bot.on('message', (message) => {
+client.on('message', (message) => {
     
     message.content.toLowerCase;
     if (message.author.bot) return;
@@ -14,7 +45,7 @@ bot.on('message', (message) => {
     }
 })
 
-bot.on('message', (message) => {
+client.on('message', (message) => {
     
     message.content.toLowerCase;
     if (message.author.bot) return;
@@ -26,7 +57,7 @@ bot.on('message', (message) => {
     }
 })
 
-bot.on('message', (message) => {
+client.on('message', (message) => {
 
     message.content.toLowerCase;
     if (message.author.bot) return;
@@ -38,7 +69,7 @@ bot.on('message', (message) => {
     }
 })
 
-bot.on('message', (message) => {
+client.on('message', (message) => {
 
     message.content.toLowerCase;
     if (message.author.bot) return;
@@ -50,7 +81,7 @@ bot.on('message', (message) => {
     }
 })
 
-bot.on('message', (message) => {
+client.on('message', (message) => {
 
     message.content.toLowerCase;
     if (message.author.bot) return;
@@ -63,7 +94,7 @@ bot.on('message', (message) => {
 })
 
 // Allegedly
-bot.on('message', (message) => {
+client.on('message', (message) => {
 
     if (message.author.bot) return;
 
@@ -75,7 +106,7 @@ bot.on('message', (message) => {
 })
 
 // Recruiter Ping
-bot.on('message', (message) => {
+client.on('message', (message) => {
     if (message.channel.id === '285362769908203521') {
         message.content.toLowerCase;
         if (message.author.bot) return;
@@ -88,17 +119,17 @@ bot.on('message', (message) => {
 })
 
 // Welcome Message
-bot.on("guildMemberAdd", member => {
+client.on("guildMemberAdd", member => {
     const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'mod-log')
     welcomeChannel.send (`${member} Welcome to the Server! Visit #❗role-assignment in order to get access to specific game text channels.`)
 })
 
 // Command Handler
-require("./util/eventHandler")(bot)
+require("./util/eventHandler")(client)
 
 const fs = require("fs");
-bot.commands = new Discord.Collection();
-bot.aliases = new Discord.Collection();
+client.commands = new Discord.Collection();
+client.aliases = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
 
@@ -111,14 +142,14 @@ fs.readdir("./commands/", (err, files) => {
 
     jsfile.forEach((f, i) => {
         let pull = require(`./commands/${f}`);
-        bot.commands.set(pull.config.name, pull);  
+        client.commands.set(pull.config.name, pull);  
         pull.config.aliases.forEach(alias => {
-            bot.aliases.set(alias, pull.config.name)
+            client.aliases.set(alias, pull.config.name)
         });
     });
 });
 
-bot.on("message", async message => {
+client.on("message", async message => {
     if(message.author.bot || message.channel.type === "dm") return;
 
     let prefix = botsettings.prefix;
@@ -127,9 +158,9 @@ bot.on("message", async message => {
     let args = message.content.substring(message.content.indexOf(' ')+1);
 
     if(!message.content.startsWith(prefix)) return;
-    let commandfile = bot.commands.get(cmd.slice(prefix.length)) || bot.commands.get(bot.aliases.get(cmd.slice(prefix.length)))
-    if(commandfile) commandfile.run(bot,message,args)
+    let commandfile = client.commands.get(cmd.slice(prefix.length)) || client.commands.get(client.aliases.get(cmd.slice(prefix.length)))
+    if(commandfile) commandfile.run(client,message,args)
 
 })
 
-bot.login(process.env.token);
+client.login(process.env.token);

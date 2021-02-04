@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (client, message, args) => {
 
     let replies = ["What's up bitches", "Fuck off", "What?", "...", "Die", "Wololololo", "Sup?", "I hope you die"];
 

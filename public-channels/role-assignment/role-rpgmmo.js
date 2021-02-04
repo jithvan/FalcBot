@@ -8,7 +8,7 @@ module.exports = (client) => {
 
   const emojis = {
     GenshinImpact: 'Genshin Impact',
-    Pokemon: 'Pokemon',
+    Pokemon: 'Pokémon',
     ESO: 'Elder Scrolls Online',
     Cyberpunk2077: 'Cyberpunk 2077',
     EliteDangerous: 'Elite Dangerous',

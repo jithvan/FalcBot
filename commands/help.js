@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
     if(!helpArgs[0]) {
         var embed = new Discord.MessageEmbed()
             .setAuthor(`Here are the commands you can use:`)
-            .setDescription('```hi | hello | remind | meme | summon```')
+            .setDescription('```hi | hello | remind | meme | summon | clear```')
             .addFields(
                 { name: 'Prefix', value: '```!```', inline: true},
                 { name: 'Improvements', value: 'Have a suggestion to improve the bot? Drop it in <#375735453845815297>'}

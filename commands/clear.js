@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
         return message.reply("Sorry. I can't delete messages.").then(m => m.delete(5000));
     }
 
-    const deleteAmount;
+    let deleteAmount;
 
     if (parseInt(args[0]) > 100) {
         deleteAmount = 100;
@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
     }
 
     message.channel.bulkDelete(deleteAmount+1, true)
-        .then(message.channel.send("Deleted \`" + toString(deleteAmount) + "\` messages."))
+        .then(message.channel.send(`Deleted \`` + toString(parseInt(args[0])) + `\` messages.`))
         .then(m => { 
             m.delete({ timeout: 3000 });
         })

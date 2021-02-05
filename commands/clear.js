@@ -19,7 +19,7 @@ module.exports.run = async (client, message, args) => {
         return message.reply("Sorry. I can't delete messages.").then(m => m.delete(5000));
     }
 
-    let deleteAmount;
+    const deleteAmount;
 
     if (parseInt(args[0]) > 100) {
         deleteAmount = 100;

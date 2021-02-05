@@ -34,7 +34,7 @@ module.exports = (client) => {
   Message(client, channelId, emojiText, reactions)
 
   const handleReaction = (reaction, user, add) => {
-    if (user.id === '466149150778589184') {
+    if (user.id === '773249128117436428') {
       return
     }
 

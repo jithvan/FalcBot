@@ -1,0 +1,9 @@
+const Message = require('./message-rolestext2')
+
+module.exports = (client) => {
+  const channelId = '375735559651328002'
+
+  let Text = '\n\n**Supporter Roles**\nPlayers that support the growth of our community.\n**★** <@&587409748329103363> - Members that Nitro Boost our Server.\n**★** <@&467404486017679380> - Members that are subscribed to our Twitch Channel.\n**★** <@&467034218313154570> - A member that has donated a small amount to help with the costs of community upkeep and growth.\n**★** <@&466969894030934016> - A member that has donated an average amount to help with the costs of community upkeep and growth.\n**★** <@&467034314564042783> - A member that has donated a large amount to help with the costs of community upkeep and growth.\n**★** <@&467034348994953237> - A member that has donated an insane amount to help with the costs of community upkeep and growth.\n\n**Other Roles**\n**★** <@&196010661325570049> - Verified casual players that play a variety of different games or friends of existing team members.\n**★** <@&616017870450589736> - Role manually added by Moderators to users that should seek to become verified as a Guest in <#285362769908203521>.\n**★** <@&467034786846736384> - Awarded to select members by Commanders for being an active member in community for over a year.\n**★** <@&467034636506365963> - Awarded to select members by Commanders for being an active member in community for over 2 years.\n**★** <@&467034446864842772> - Awarded to select members by Commanders for being an active in the community for over 3 years.\n**★** <@&322719593967779840> - A program that operates as an agent for a user, normally used to automate certain tasks on our discord.\n**★** <@&698703446945038398> - Roles that serve specific functions. They may also be game specific.\n**★** <@&465973883577696256> - Roles for games widely played in our community.'
+
+  Message(client, channelId, Text)
+}

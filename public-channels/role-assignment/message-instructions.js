@@ -8,7 +8,7 @@ module.exports = async (client, id, text, reactions = []) => {
     } else {
       // Edit the existing message
       for (const message of messages) {
-        if (message[0] === '806637250972352553') {
+        if (message[0] === '806691297016152074') {
           message[1].edit(text)
         }
       }

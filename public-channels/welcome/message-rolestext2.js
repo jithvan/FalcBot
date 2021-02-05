@@ -1,4 +1,4 @@
-module.exports = async (client, id, text, reactions = []) => {
+module.exports = async (client, id, text) => {
   const channel = await client.channels.fetch(id)
 
   channel.messages.fetch().then((messages) => {
@@ -8,7 +8,7 @@ module.exports = async (client, id, text, reactions = []) => {
     } else {
       // Edit the existing message
       for (const message of messages) {
-        if (message[0] === '806691328079560784') {
+        if (message[0] === '806733502401216522') {
           message[1].edit(text)
         }
       }

@@ -17,6 +17,19 @@ const roleClaim10 = require('./public-channels/role-assignment/role-footer')
 
 const communityLinks = require('./public-channels/community-links/content-links')
 
+const welcomeHead = require('./public-channels/welcome/welcome-head')
+const welcomeHeadText = require('./public-channels/welcome/welcome-headtext')
+const welcomeRules = require('./public-channels/welcome/welcome-rules')
+const welcomeRulesText = require('./public-channels/welcome/welcome-rulestext')
+const welcomeChannels = require('./public-channels/welcome/welcome-channels')
+const welcomeChannelsText = require('./public-channels/welcome/welcome-channelstext')
+const welcomeRoles = require('./public-channels/welcome/welcome-roles')
+const welcomeRolesText = require('./public-channels/welcome/welcome-rolestext')
+const welcomeRolesText2 = require('./public-channels/welcome/welcome-rolestext2')
+const welcomeCommands = require('./public-channels/welcome/welcome-commands')
+const welcomeCommandsText = require('./public-channels/welcome/welcome-commandstext')
+
+// Post Public Channel Text
 client.on('ready', () => {
   console.log('The client is ready!')
 
@@ -32,6 +45,18 @@ client.on('ready', () => {
   roleClaim10(client)
 
   communityLinks(client)
+
+  welcomeHead(client)
+  welcomeHeadText(client)
+  welcomeRules(client)
+  welcomeRulesText(client)
+  welcomeChannels(client)
+  welcomeChannelsText(client)
+  welcomeRoles(client)
+  welcomeRolesText(client)
+  welcomeRolesText2(client)
+  welcomeCommands(client)
+  welcomeCommandsText(client)
 })
 
 // Respond to messages
@@ -119,10 +144,15 @@ client.on('message', (message) => {
 })
 
 // Welcome Message
-client.on("guildMemberAdd", member => {
-    const welcomeChannel = member.guild.channels.cache.find(channel => channel.name === 'mod-log')
-    welcomeChannel.send (`${member} Welcome to the Server! Visit #❗role-assignment in order to get access to specific game text channels.`)
-})
+// Create an event listener for new guild members
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.cache.find(ch => ch.name === 'test-commands');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(`Welcome to the server, ${member}! Visit <#465974772828864532> in order to get access to specific game channels.`);
+});
 
 // Command Handler
 require("./util/eventHandler")(client)

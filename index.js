@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const botsettings = require('./botsettings.json');
+const welcome = require('./events/welcome')
 
 const client = new Discord.Client({disableEveryone: true});
 
@@ -29,10 +30,13 @@ const roleClaim10 = require('./public-channels/role-assignment/role-footer')
 //const welcomeCommands = require('./public-channels/welcome/welcome-commands')
 //const welcomeCommandsText = require('./public-channels/welcome/welcome-commandstext')
 
-// Post Public Channel Text
 client.on('ready', () => {
   console.log('The client is ready!')
 
+  //Welcome Message
+  welcome(client)
+
+  // Post Public Channel Text
   roleClaim1(client)
   roleClaim2(client)
   roleClaim3(client)
@@ -142,26 +146,6 @@ client.on('message', (message) => {
         }
     }
 })
-
-// Welcome Message
-// Create an event listener for new guild members
-client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = client.channels.get('466966281837608960');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Welcome to the server, ${member}! Visit <#465974772828864532> in order to get access to specific game channels.`);
-});
-
-client.on('guildMemberRemove', member => {
-    // Send the message to a designated channel on a server:
-    const channel = client.channels.get('466966281837608960');
-    // Do nothing if the channel wasn't found on this server
-    if (!channel) return;
-    // Send the message, mentioning the member
-    channel.send(`${member} Left the discord`);
-  });
 
 // Command Handler
 require("./util/eventHandler")(client)

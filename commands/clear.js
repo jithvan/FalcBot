@@ -24,11 +24,11 @@ module.exports.run = async (client, message, args) => {
     if (parseInt(args[0]) > 100) {
         deleteAmount = 100;
     } else {
-        deleteAmount = parseInt(args[0])+1;
+        deleteAmount = parseInt(args[0]);
     }
 
     message.channel.bulkDelete(deleteAmount, true)
-        .then(deleted => message.channel.send(`Deleted \`${deleted.size}\` messages.`))
+        .then(deleted => message.channel.send(`Deleted \`${deleted.size}\` messages.`).then(m => m.delete(5000)))
         .catch(err => message.reply(`Something went wrong... ${err}`));
 }
 

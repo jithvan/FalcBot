@@ -1,5 +1,5 @@
 module.exports = (client) => {
-  const channelId = '466966281837608960' // Welcome channel
+  const channelId = '465920602683867136' // Welcome channel
   
   client.on('guildMemberAdd', (member) => {
     const message = `Welcome to the server, <@${member.id}>! Visit <#465974772828864532> in order to get access to specific game channels.`

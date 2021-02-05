@@ -28,7 +28,7 @@ module.exports.run = async (client, message, args) => {
     }
 
     message.channel.bulkDelete(deleteAmount+1, true)
-        .then(deleted => message.channel.send(`Deleted \`` + toString(parseInt(deleted.size)-1) + `\` messages.`))
+        .then(message.channel.send("Deleted \`" + toString(deleteAmount) + "\` messages."))
         .then(m => { 
             m.delete({ timeout: 3000 });
         })

@@ -85,11 +85,10 @@ module.exports = (client) => {
     // Destiny 2
     client.on('message', (message) => {
         if (message.channel.id === '383758230293315585') {
-            message.content.toLowerCase;
             if (message.author.bot) return;
     
             if (Math.random() < .005) {
-                message.channel.send("You just never quit, do you? Took out Ghaul. Woke up the traveler. And now half of what i hear in the streets is how much you and your clan are making a difference. And that's why i started this whole clan thing in the first place. People are still waiting for the Vanguard to lead the way. But it's time for a change. And guardians like you are making it happen. No pressure.", {files: ["https://media.tenor.co/videos/db69e47c33248f444c39354ed97f272d/mp4"]});
+                message.channel.send("You just never quit, do you? Took out Ghaul. Woke up the traveler. And now half of what i hear in the streets is how much you and your clan are making a difference. And that's why i started this whole clan thing in the first place. People are still waiting for the Vanguard to lead the way. But it's time for a change. And guardians like you are making it happen. No pressure.", {files: ["https://media1.tenor.com/images/b633b3b53c12dd0993a6dd5e9ed17a31/tenor.gif?itemid=18200055"]});
 
             }
         }

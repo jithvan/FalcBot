@@ -1,8 +1,9 @@
 const Discord = require('discord.js');
 const botsettings = require('./botsettings.json');
-const welcome = require('./events/welcome')
-
 const client = new Discord.Client({disableEveryone: true});
+
+const welcome = require('./events/welcome')
+const respond = require('./events/response-triggers')
 
 // Initialize Public Channel Text
 const roleClaim1 = require('./public-channels/role-assignment/role-instructions')
@@ -28,13 +29,16 @@ const roleClaim10 = require('./public-channels/role-assignment/role-footer')
 //const welcomeRolesText = require('./public-channels/welcome/welcome-rolestext')
 //const welcomeRolesText2 = require('./public-channels/welcome/welcome-rolestext2')
 //const welcomeCommands = require('./public-channels/welcome/welcome-commands')
-const welcomeCommandsText = require('./public-channels/welcome/welcome-commandstext')
+//const welcomeCommandsText = require('./public-channels/welcome/welcome-commandstext')
 
 client.on('ready', () => {
   console.log('The client is ready!')
 
-  //Welcome Message
+  // Welcome Message
   welcome(client)
+
+  // Response Triggers
+  respond(client)
 
   // Post Public Channel Text
   roleClaim1(client)
@@ -60,91 +64,7 @@ client.on('ready', () => {
   //welcomeRolesText(client)
   //welcomeRolesText2(client)
   //welcomeCommands(client)
-  welcomeCommandsText(client)
-})
-
-// Respond to messages
-client.on('message', (message) => {
-    
-    message.content.toLowerCase;
-    if (message.author.bot) return;
-
-    if (message.content.includes("who is god?")) {
-        message.channel.send("This is god", {files: ["https://media.discordapp.net/attachments/467026448234840074/777060171099930664/image0.jpg"]});
-    }
-})
-
-client.on('message', (message) => {
-    
-    message.content.toLowerCase;
-    if (message.author.bot) return;
-
-    if (message.content.includes("bambi")) {
-        if (Math.random() < .01) {
-            message.channel.send("", {files: ["https://media1.tenor.com/images/b1557ea25a791b29b5bed7d28bd0ce83/tenor.gif?itemid=8978880"]});
-        }
-    }
-})
-
-client.on('message', (message) => {
-
-    message.content.toLowerCase;
-    if (message.author.bot) return;
-
-    if (message.content.includes("shit") || message.content.includes("fuck")) {
-        if (Math.random() < .01) {
-            message.channel.send("not in my Christian Discord Server");
-        }
-    }
-})
-
-client.on('message', (message) => {
-
-    message.content.toLowerCase;
-    if (message.author.bot) return;
-
-    if (message.content.includes("merry") || message.content.includes("christmas")) {
-        if (Math.random() < .50) {
-            message.channel.send("<a:ZeroTwo:791772994908979280>");
-        }
-    }
-})
-
-client.on('message', (message) => {
-
-    message.content.toLowerCase;
-    if (message.author.bot) return;
-
-    if (message.content.includes("bruh")) {
-        if (Math.random() < .01) {
-            message.channel.send("Bruh", {files: ["https://media1.tenor.com/images/460b6dcf3573845f0a156f7c51834bb1/tenor.gif"]});
-        }
-    }
-})
-
-// Allegedly
-client.on('message', (message) => {
-
-    if (message.author.bot) return;
-
-    let replies = ["Allegedly", "That's what she said"];
-    let result = Math.floor((Math.random()*replies.length));
-    if (Math.random() < .01) {
-        message.channel.send(replies[result]);
-    }
-})
-
-// Recruiter Ping
-client.on('message', (message) => {
-    if (message.channel.id === '285362769908203521') {
-        message.content.toLowerCase;
-        if (message.author.bot) return;
-
-        if (message.content.includes("<@&745100827818983524>")) {
-            message.channel.send("Please hang tight! A Recruiter will be with you as soon as one is available.");
-            message.channel.send("Response times may be longer between 2AM and 10AM EST");
-        }
-    }
+  //welcomeCommandsText(client)
 })
 
 // Command Handler

@@ -4,6 +4,7 @@ const client = new Discord.Client({disableEveryone: true});
 
 const welcome = require('./events/welcome')
 const respond = require('./events/response-triggers')
+const twitchAlert = require('./events/twitch-alert')
 
 // Initialize Public Channel Text
 const roleClaim1 = require('./public-channels/role-assignment/role-instructions')
@@ -39,6 +40,9 @@ client.on('ready', () => {
 
   // Response Triggers
   respond(client)
+
+  // Twitch Stream Alerts
+  twitchAlert(client)
 
   // Post Public Channel Text
   roleClaim1(client)

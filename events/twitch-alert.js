@@ -5,7 +5,7 @@ module.exports = (client) => {
     const streamer = 'falcongamingnetwork';
 
     const api = `https://api.twitch.tv/kraken/streams/${streamer}?client_id=${process.env.twitch_client}`;
-    const announcements = client.channels.find('name', 'announcements');
+    const channelId = '467026448234840074'
     
     snekfetch.get(api).then(r => {
         if (r.body.stream === null) {
@@ -26,7 +26,7 @@ module.exports = (client) => {
             .addField('Views', `${r.body.stream.channel.views}`, true)
             .setImage(r.body.stream.preview.large)
 
-        return client.channels.get(announcements.id).send({ embed });
+        return client.channels.cache.get(channelId).send({ embed });
         }
     });
 }

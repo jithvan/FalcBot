@@ -22,6 +22,7 @@
     "fs": "0.0.1-security",
     "got": "^11.8.1",
     "moment": "^2.29.1",
-    "random-puppy": "^1.1.0"
+    "random-puppy": "^1.1.0",
+    "snekfetch": "^4.0.4"
   }
 }

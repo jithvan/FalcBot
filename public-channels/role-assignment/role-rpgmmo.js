@@ -13,6 +13,7 @@ module.exports = (client) => {
     Cyberpunk2077: 'Cyberpunk 2077',
     EliteDangerous: 'Elite Dangerous',
     DarkSouls : 'Dark Souls',
+    StarCitizen : 'Star Citizen',
   }
 
   const reactions = []

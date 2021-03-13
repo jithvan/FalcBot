@@ -104,4 +104,16 @@ module.exports = (client) => {
             }
         }
     })
+
+    client.on('message', (message) => {
+    
+        message.content.toLowerCase;
+        if (message.author.bot) return;
+    
+        if (message.content.includes("trials")) {
+            if (Math.random() < .5) {
+                message.channel.send("", {files: ["https://i.imgur.com/RS72DH1.png"]});
+            }
+        }
+    })
 }

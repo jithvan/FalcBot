@@ -111,8 +111,10 @@ module.exports = (client) => {
         if (message.author.bot) return;
     
         if (message.content.includes("trials")) {
+            let replies = ["https://i.imgur.com/RS72DH1.png", "https://i.imgur.com/qoopFlZ.jpg", "https://i.imgur.com/Q4WDXUv.jpg", "https://i.imgur.com/H337wlr.jpg", "https://i.imgur.com/hk0pfbK.jpg", "https://i.imgur.com/8YO21Cn.jpg", "https://i.imgur.com/Fci8xHb.jpg", "https://i.imgur.com/5tMvH2x.jpg", "https://i.imgur.com/mKnMNNg.jpg"];
+            let result = Math.floor((Math.random()*replies.length));
             if (Math.random() < .5) {
-                message.channel.send("", {files: ["https://i.imgur.com/RS72DH1.png"]});
+                message.channel.send("", {files: [replies[result]]});
             }
         }
     })

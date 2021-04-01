@@ -2,57 +2,34 @@ module.exports = (client) => {
     client.on('message', (message) => {
     
         message.content.toLowerCase;
+        
         if (message.author.bot) return;
-    
+
         if (message.content.includes("who is god?")) {
             message.channel.send("This is god", {files: ["https://media.discordapp.net/attachments/467026448234840074/777060171099930664/image0.jpg"]});
         }
-    })
     
-    client.on('message', (message) => {
-        
-        message.content.toLowerCase;
-        if (message.author.bot) return;
-    
-        if (message.content.includes("bambi")) {
-            if (Math.random() < .01) {
-                message.channel.send("", {files: ["https://media1.tenor.com/images/b1557ea25a791b29b5bed7d28bd0ce83/tenor.gif?itemid=8978880"]});
+        if (message.content.includes("merry") || message.content.includes("christmas")) {
+            if (Math.random() < .5) {
+                message.channel.send("<a:ZeroTwo:791772994908979280>");
             }
         }
-    })
-    
-    client.on('message', (message) => {
-    
-        message.content.toLowerCase;
-        if (message.author.bot) return;
-    
+
+        if (message.content.includes("bruh")) {
+            if (Math.random() < .5) {
+                message.channel.send("Bruh", {files: ["https://media1.tenor.com/images/460b6dcf3573845f0a156f7c51834bb1/tenor.gif"]});
+            }
+        }
+
         if (message.content.includes("shit") || message.content.includes("fuck")) {
             if (Math.random() < .01) {
                 message.channel.send("not in my Christian Discord Server");
             }
         }
-    })
-    
-    client.on('message', (message) => {
-    
-        message.content.toLowerCase;
-        if (message.author.bot) return;
-    
-        if (message.content.includes("merry") || message.content.includes("christmas")) {
-            if (Math.random() < .50) {
-                message.channel.send("<a:ZeroTwo:791772994908979280>");
-            }
-        }
-    })
-    
-    client.on('message', (message) => {
-    
-        message.content.toLowerCase;
-        if (message.author.bot) return;
-    
-        if (message.content.includes("bruh")) {
+
+        if (message.content.includes("bambi")) {
             if (Math.random() < .01) {
-                message.channel.send("Bruh", {files: ["https://media1.tenor.com/images/460b6dcf3573845f0a156f7c51834bb1/tenor.gif"]});
+                message.channel.send("", {files: ["https://media1.tenor.com/images/b1557ea25a791b29b5bed7d28bd0ce83/tenor.gif?itemid=8978880"]});
             }
         }
     })
@@ -113,7 +90,7 @@ module.exports = (client) => {
         if (message.content.includes("trials")) {
             let replies = ["https://i.imgur.com/RS72DH1.png", "https://i.imgur.com/qoopFlZ.jpg", "https://i.imgur.com/Q4WDXUv.jpg", "https://i.imgur.com/H337wlr.jpg", "https://i.imgur.com/hk0pfbK.jpg", "https://i.imgur.com/8YO21Cn.jpg", "https://i.imgur.com/Fci8xHb.jpg", "https://i.imgur.com/5tMvH2x.jpg", "https://i.imgur.com/mKnMNNg.jpg"];
             let result = Math.floor((Math.random()*replies.length));
-            if (Math.random() < .5) {
+            if (Math.random() < .1) {
                 message.channel.send("", {files: [replies[result]]});
             }
         }

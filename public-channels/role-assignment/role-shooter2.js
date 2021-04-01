@@ -11,6 +11,7 @@ module.exports = (client) => {
     Warframe: 'Warframe',
     Anthem: 'Anthem',
     TheDivision: 'The Division',
+    Outriders: 'Outriders',
   }
 
   const reactions = []

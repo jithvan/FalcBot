@@ -6,7 +6,7 @@ module.exports = (client) => {
         if (message.author.bot) return;
 
         if (message.content.includes("who is god?")) {
-            message.channel.send("This is god", {files: ["https://media.discordapp.net/attachments/467026448234840074/777060171099930664/image0.jpg"]});
+            message.channel.send("This is god", {files: ["https://pbs.twimg.com/media/EWBUHfjXQAAPvY7.jpg"]});
         }
     
         if (message.content.includes("merry") || message.content.includes("christmas")) {

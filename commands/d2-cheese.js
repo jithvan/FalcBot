@@ -11,8 +11,7 @@ module.exports.run = async (client, message, args) => {
     if(helpArgs[0] === '101') {
         const embed = new Discord.MessageEmbed()
         .setAuthor('Cheesing in Destiny 2')
-        .setTitle('YouTuber Cheese Forever')
-        .setURL('https://www.youtube.com/c/CheeseForever/')
+        .setDescription('The YouTuber [Cheese Forever](https://www.youtube.com/c/CheeseForever/) is the go to place to learn about the latest cheeses in Destiny 2.')
         .setColor('#ffcc00')
         .setThumbnail('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/Cheese_Icon.png')
         .setImage('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/Cheesing101.png')
@@ -25,10 +24,10 @@ module.exports.run = async (client, message, args) => {
     if(helpArgs[0] === 'ghostlobby') {
         const embed = new Discord.MessageEmbed()
         .setAuthor('Cheesing in Destiny 2')
-        .setTitle('Example Ghost lobby in D1')
-        .setURL('https://www.youtube.com/watch?v=3w6A_ctkhEo')
-        .setTitle('Example Ghost lobby in D2')
-        .setURL('https://www.youtube.com/watch?v=92-SDZ4SR5Q')
+        .addFields(
+            { name: 'Example Ghost lobby in D1', value: '[Watch video](https://www.youtube.com/watch?v=3w6A_ctkhEo)', inline: true},
+            { name: 'Example Ghost lobby in D2', value: '[Watch video](https://www.youtube.com/watch?v=92-SDZ4SR5Q)', inline: true}
+        )
         .setColor('#ffcc00')
         .setThumbnail('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/Cheese_Icon.png')
         .setImage('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/GhostLobbies.png')
@@ -44,7 +43,6 @@ module.exports.run = async (client, message, args) => {
         .setDescription('The following parameters can be used to learn more about specific aspects of cheesing within Destiny 2')
         .setColor('#ffcc00')
         .setThumbnail('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/Cheese_Icon.png')
-        .setFooter('This is a example footer', 'https://cdn.osxdaily.com/wp-content/uploads/2016/10/YouTube-icon-full_color-610x430.png')
         .addFields(
             { name: '101', value: 'Learn about the cheesing culture in Destiny 2'},
             { name: 'ghostlobby', value: 'Learn about ghost lobbies'},

@@ -30,7 +30,7 @@ const roleClaim10 = require('./public-channels/role-assignment/role-footer')
 //const welcomeRolesText = require('./public-channels/welcome/welcome-rolestext')
 //const welcomeRolesText2 = require('./public-channels/welcome/welcome-rolestext2')
 //const welcomeCommands = require('./public-channels/welcome/welcome-commands')
-const welcomeCommandsText = require('./public-channels/welcome/welcome-commandstext')
+//const welcomeCommandsText = require('./public-channels/welcome/welcome-commandstext')
 
 client.on('ready', () => {
   console.log('The client is ready!')
@@ -68,7 +68,7 @@ client.on('ready', () => {
   //welcomeRolesText(client)
   //welcomeRolesText2(client)
   //welcomeCommands(client)
-  welcomeCommandsText(client)
+  //welcomeCommandsText(client)
 })
 
 // Command Handler

@@ -22,7 +22,7 @@ module.exports.run = async (client, message, args) => {
 
     //Custom Help command by using the second argument.
     if (message.channel.id === channelID) {
-        if(helpArgs[0] === 'GhostLobby') {
+        if(helpArgs[0] === 'GhostLobby' || helpArgs[0] === 'ghostlobby') {
             const embed = new Discord.MessageEmbed()
             .setAuthor('Cheesing in Destiny 2')
             .addFields(
@@ -39,7 +39,7 @@ module.exports.run = async (client, message, args) => {
 
     //Custom Help command by using the second argument.
     if (message.channel.id === channelID) {
-        if(helpArgs[0] === 'Trials') {
+        if(helpArgs[0] === 'Trials' || helpArgs[0] === 'trials') {
             const embed = new Discord.MessageEmbed()
             .setAuthor('Cheesing in Destiny 2')
             .addFields(
@@ -56,7 +56,7 @@ module.exports.run = async (client, message, args) => {
 
     //Custom Help command by using the second argument.
     if (message.channel.id === channelID) {
-        if(helpArgs[0] === 'Discords') {
+        if(helpArgs[0] === 'Discords' || helpArgs[0] === 'discords') {
             const embed = new Discord.MessageEmbed()
             .setAuthor('Cheesing in Destiny 2')
             .addFields(
@@ -73,7 +73,7 @@ module.exports.run = async (client, message, args) => {
 
     //Custom Help command by using the second argument.
     if (message.channel.id === channelID) {
-        if(helpArgs[0] === 'OOB') {
+        if(helpArgs[0] === 'OOB' || helpArgs[0] === 'oob') {
             const embed = new Discord.MessageEmbed()
             .setAuthor('Cheesing in Destiny 2')
             .addFields(

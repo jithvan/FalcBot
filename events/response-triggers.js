@@ -55,6 +55,7 @@ module.exports = (client) => {
             if (message.content.includes("<@&745100827818983524>")) {
                 message.channel.send("Please hang tight! A Recruiter will be with you as soon as one is available.");
                 message.channel.send("Response times may be longer between 2AM and 10AM EST");
+                message.channel.send("Recruiters for Destiny 2 may be unavailable until 1PM EST 5/23 due to the Day 1 Raid");
             }
         }
     })

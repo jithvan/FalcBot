@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports.run = async (client, message, args) => {
     //We have to set a argument for the help command because its going to have a seperate argument.
     let helpArray = message.content.split(" ");
-    let helpArgs = helpArray.slice(1);
+    let helpArgs = helpArray.slice(1).toLowerCase();
     const channelID = '466966281837608960';
 
     // 101
@@ -39,7 +39,7 @@ module.exports.run = async (client, message, args) => {
 
     // Trials
     if (message.channel.id === channelID) {
-        if(helpArgs[0].toLowerCase() === 'trials') {
+        if(helpArgs[0] === 'trials') {
             const embed = new Discord.MessageEmbed()
             .setAuthor('Cheesing in Destiny 2')
             .setDescription('Trials Cheesing can be accomplished on any platform. It is most successfully done on platforms with lower number of players in the matchmaking pool (e.g. Stadia)')
@@ -53,7 +53,7 @@ module.exports.run = async (client, message, args) => {
 
     // OOB
     if (message.channel.id === channelID) {
-        if(helpArgs[0].toLowerCase() === 'oob') {
+        if(helpArgs[0] === 'oob') {
             const embed = new Discord.MessageEmbed()
             .setAuthor('Cheesing in Destiny 2')
             .setDescription('The YouTuber [Froggy618157725](https://www.youtube.com/channel/UCtEvLS7_ks-k-dB3_ebjgPw) is one of the best people to watch to learn about OOBing in Destiny 2.')
@@ -67,7 +67,7 @@ module.exports.run = async (client, message, args) => {
 
     // Discords
     if (message.channel.id === channelID) {
-        if(helpArgs[0].toLowerCase() === 'discords') {
+        if(helpArgs[0] === 'discords') {
             const embed = new Discord.MessageEmbed()
             .setAuthor('Cheesing in Destiny 2')
             .setDescription('There are many Discord Communities that help players find like minded people to cheese with. Most of them are private due to constant raids/distruption by trolls. The following Discords are compliant with Bungie/Discord/Steam ToS, and are recommended by Falcon Gaming.')

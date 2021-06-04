@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 
 module.exports.run = async (client, message, args) => {
     //We have to set a argument for the help command beacuse its going to have a seperate argument.
-    let helpArray = message.content.toLowerCase.split(" ");
-    let helpArgs = helpArray.slice(1);
+    let helpArray = message.content.split(" ");
+    let helpArgs = helpArray.slice(1).toLowerCase();
     const channelID = '466966281837608960';
 
     //Custom Help command by using the second argument.

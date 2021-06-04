@@ -4,7 +4,7 @@ module.exports.run = async (client, message, args) => {
     //We have to set a argument for the help command because its going to have a seperate argument.
     let helpArray = message.content.toLowerCase().split(" ");
     let helpArgs = helpArray.slice(1);
-    const channelID = '466966281837608960';
+    const channelID = '597529693469802497';
 
     // 101
     if (message.channel.id === channelID) {

@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 
 module.exports.run = async (client, message, args) => {
-    //We have to set a argument for the help command beacuse its going to have a seperate argument.
+    //We have to set a argument for the help command because its going to have a seperate argument.
     let helpArray = message.content.split(" ");
     let helpArgs = helpArray.slice(1);
     const channelID = '466966281837608960';
 
-    //Custom Help command by using the second argument.
+    // 101
     if (message.channel.id === channelID) {
         if(helpArgs[0] === '101') {
             const embed = new Discord.MessageEmbed()
@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) => {
         }
     }
 
-    //Custom Help command by using the second argument.
+    // Ghost Lobby
     if (message.channel.id === channelID) {
         if(helpArgs[0].toLowerCase() === 'ghostlobby') {
             const embed = new Discord.MessageEmbed()
@@ -37,7 +37,7 @@ module.exports.run = async (client, message, args) => {
         }
     }
 
-    //Custom Help command by using the second argument.
+    // Trials
     if (message.channel.id === channelID) {
         if(helpArgs[0].toLowerCase() === 'trials') {
             const embed = new Discord.MessageEmbed()
@@ -51,35 +51,34 @@ module.exports.run = async (client, message, args) => {
         }
     }
 
-    //Custom Help command by using the second argument.
+    // OOB
     if (message.channel.id === channelID) {
-        if(helpArgs[0].toLowerCase() === 'discords') {
+        if(helpArgs[0].toLowerCase() === 'oob') {
             const embed = new Discord.MessageEmbed()
             .setAuthor('Cheesing in Destiny 2')
-            .addFields(
-                { name: 'Example Ghost lobby in D1', value: '[Watch video](https://www.youtube.com/watch?v=3w6A_ctkhEo)'},
-                { name: 'Example Ghost lobby in D2', value: '[Watch video](https://www.youtube.com/watch?v=92-SDZ4SR5Q)'}
-            )
+            .setDescription('The YouTuber [Froggy618157725](https://www.youtube.com/channel/UCtEvLS7_ks-k-dB3_ebjgPw) is one of the best people to watch to learn about OOBing in Destiny 2.')
             .setColor('#ffcc00')
             .setThumbnail('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/Cheese_Icon.png')
-            .setImage('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/GhostLobbies.png')
+            .setImage('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/OOB.png')
             .setTimestamp()
             message.channel.send(embed);
         }
     }
 
-    //Custom Help command by using the second argument.
+    // Dicords
     if (message.channel.id === channelID) {
-        if(helpArgs[0].toLowerCase() === 'oob') {
+        if(helpArgs[0].toLowerCase() === 'discords') {
             const embed = new Discord.MessageEmbed()
             .setAuthor('Cheesing in Destiny 2')
+            .setDescription('There are many Discord Communities that help players find like minded people to cheese with. Most of them are private due to constant raids/distruption by trolls. The following Discords are compliant with Bungie/Discord/Steam ToS, and are recommended by Falcon Gaming.')
             .addFields(
-                { name: 'Example Ghost lobby in D1', value: '[Watch video](https://www.youtube.com/watch?v=3w6A_ctkhEo)'},
-                { name: 'Example Ghost lobby in D2', value: '[Watch video](https://www.youtube.com/watch?v=92-SDZ4SR5Q)'}
+                { name: 'RaidSecrets', value: 'The official Discord of /r/RaidSecrets. Mostly Encounter/Boss Mechanic Cheeses, Loadout Exploits, OOBs, and Datamining. [Discord Invite](https://discord.gg/KPvx6xxHdz)'},
+                { name: 'Host Haven', value: 'One of the largest, oldest, and most extremely well organized communities dedicated to PVP related cheesing activities. It has constantly been a target of toxic influencers, and is an invite only Discord. Falcon Gaming has partnered with Host Haven to give our members exclusive access to this community. DM a Destiny 2 Moderator for a one time invite link.'},
+                { name: 'Triumph Cheesing', value: 'As the name suggests, this is a Steam based community dedicated to helping players cheese hard to earn triumphs. [Discord Invite](https://discord.gg/fuxUKEqvWn)'}
             )
             .setColor('#ffcc00')
             .setThumbnail('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/Cheese_Icon.png')
-            .setImage('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/GhostLobbies.png')
+            .setFooter('If an invite link has expired please let a moderator know.')
             .setTimestamp()
             message.channel.send(embed);
         }
@@ -95,10 +94,10 @@ module.exports.run = async (client, message, args) => {
         .setThumbnail('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/Cheese_Icon.png')
         .addFields(
             { name: '101', value: 'Learn about the cheesing culture in Destiny 2'},
-            { name: 'GhostLobby', value: 'Learn about ghost lobbies'},
-            { name: 'Trials', value: 'Learn about how to do ghost lobbies in trials'},
-            { name: 'Discords', value: 'Learn about discord communities dedicated to cheesing.'},
-            { name: 'OOB', value: 'Learn about the practicve of going Out of Bounds.'}
+            { name: 'GhostLobby', value: 'Learn about Ghost Lobbies'},
+            { name: 'Trials', value: 'Learn about how to do Ghost Lobbies in Trials'},
+            { name: 'OOB', value: 'Learn about the practice of going Out of Bounds.'},
+            { name: 'Discords', value: 'Learn about Discord communities dedicated to cheesing.'}
         )
         .setTimestamp()
         message.channel.send(embed);}

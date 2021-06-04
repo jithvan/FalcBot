@@ -72,9 +72,9 @@ module.exports.run = async (client, message, args) => {
             .setAuthor('Cheesing in Destiny 2')
             .setDescription('There are many Discord Communities that help players find like minded people to cheese with. Most of them are private due to constant raids/distruption by trolls. The following Discords are compliant with Bungie/Discord/Steam ToS, and are recommended by Falcon Gaming.')
             .addFields(
-                { name: 'RaidSecrets', value: 'The official Discord of /r/RaidSecrets. Mostly Encounter/Boss Mechanic Cheeses, Loadout Exploits, OOBs, and Datamining. [Discord Invite](https://discord.gg/KPvx6xxHdz)'},
-                { name: 'Host Haven', value: 'One of the largest, oldest, and most extremely well organized communities dedicated to PVP related cheesing activities. It has constantly been a target of toxic influencers, and is an invite only Discord. Falcon Gaming has partnered with Host Haven to give our members exclusive access to this community. DM a Destiny 2 Moderator for a one time invite link.'},
-                { name: 'Triumph Cheesing', value: 'As the name suggests, this is a Steam based community dedicated to helping players cheese hard to earn triumphs. [Discord Invite](https://discord.gg/fuxUKEqvWn)'}
+                { name: '<a:Stranger:781024999087276043> RaidSecrets', value: 'The official Discord of /r/RaidSecrets. Mostly Encounter/Boss Mechanic Cheeses, Loadout Exploits, OOBs, and Datamining. [Discord Invite](https://discord.gg/KPvx6xxHdz)'},
+                { name: '<a:Shaxx:781027382176907264> Host Haven', value: 'One of the largest, oldest, and most extremely well organized communities dedicated to PVP related cheesing activities. It has constantly been a target of toxic influencers, and is an invite only Discord. Falcon Gaming has partnered with Host Haven to give our members exclusive access to this community. DM a Destiny 2 Moderator for a one time invite link.'},
+                { name: '<a:Sweeper:781027382436954122> Triumph Cheesing', value: 'As the name suggests, this is a Steam based community dedicated to helping players cheese hard to earn triumphs. [Discord Invite](https://discord.gg/fuxUKEqvWn)'}
             )
             .setColor('#ffcc00')
             .setThumbnail('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/Cheese_Icon.png')

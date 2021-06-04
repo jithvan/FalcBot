@@ -22,7 +22,7 @@ module.exports.run = async (client, message, args) => {
 
     //Custom Help command by using the second argument.
     if (message.channel.id === channelID) {
-        if(message.content.toLowerCase.helpArgs[0] === helpArgs[0] === 'ghostlobby') {
+        if(toLowerCase(helpArgs[0]) === 'ghostlobby') {
             const embed = new Discord.MessageEmbed()
             .setAuthor('Cheesing in Destiny 2')
             .addFields(
@@ -39,7 +39,7 @@ module.exports.run = async (client, message, args) => {
 
     //Custom Help command by using the second argument.
     if (message.channel.id === channelID) {
-        if(message.content.toLowerCase.helpArgs[0] === 'trials') {
+        if(toLowerCase(helpArgs[0]) === 'trials') {
             const embed = new Discord.MessageEmbed()
             .setAuthor('Cheesing in Destiny 2')
             .setDescription('Trials Cheesing can be accomplished on any platform. It is most successfully done on platforms with lower number of players in the matchmaking pool (e.g. Stadia)')
@@ -53,7 +53,7 @@ module.exports.run = async (client, message, args) => {
 
     //Custom Help command by using the second argument.
     if (message.channel.id === channelID) {
-        if(message.content.toLowerCase.helpArgs[0] === 'discords') {
+        if(toLowerCase(helpArgs[0]) === 'discords') {
             const embed = new Discord.MessageEmbed()
             .setAuthor('Cheesing in Destiny 2')
             .addFields(
@@ -70,7 +70,7 @@ module.exports.run = async (client, message, args) => {
 
     //Custom Help command by using the second argument.
     if (message.channel.id === channelID) {
-        if(message.content.toLowerCase.helpArgs[0] === 'oob') {
+        if(toLowerCase(helpArgs[0]) === 'oob') {
             const embed = new Discord.MessageEmbed()
             .setAuthor('Cheesing in Destiny 2')
             .addFields(

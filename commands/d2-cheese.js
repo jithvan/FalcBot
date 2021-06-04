@@ -65,7 +65,7 @@ module.exports.run = async (client, message, args) => {
         }
     }
 
-    // Dicords
+    // Discords
     if (message.channel.id === channelID) {
         if(helpArgs[0].toLowerCase() === 'discords') {
             const embed = new Discord.MessageEmbed()
@@ -86,7 +86,7 @@ module.exports.run = async (client, message, args) => {
 
     //Normal usage of (prefix)help without any args. (Shows all of the commands and you should set the commands yourself)
     if (message.channel.id === channelID) {
-    if(!helpArgs[0]) {
+    if(!helpArgs[0].toLowerCase()) {
         const embed = new Discord.MessageEmbed()
         .setAuthor('Cheesing in Destiny 2')
         .setDescription('The following parameters can be used to learn more about specific aspects of cheesing within Destiny 2')
@@ -100,7 +100,8 @@ module.exports.run = async (client, message, args) => {
             { name: 'Discords', value: 'Learn about Discord communities dedicated to cheesing.'}
         )
         .setTimestamp()
-        message.channel.send(embed);}
+        message.channel.send(embed);
+        }
     }
 }    
 

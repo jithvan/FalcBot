@@ -14,6 +14,7 @@ module.exports = (client) => {
     EliteDangerous: 'Elite Dangerous',
     DarkSouls : 'Dark Souls',
     StarCitizen : 'Star Citizen',
+    FinalFantasy : 'Final Fantasy',
   }
 
   const reactions = []

@@ -20,37 +20,6 @@ module.exports.run = async (client, message, args) => {
         }
     }
 
-    // Ghost Lobby
-    if (message.channel.id === channelID) {
-        if(helpArgs[0] === 'ghostlobby') {
-            const embed = new Discord.MessageEmbed()
-            .setAuthor('Cheesing in Destiny 2')
-            .addFields(
-                { name: 'Example Ghost lobby in D1', value: '[Watch video](https://www.youtube.com/watch?v=3w6A_ctkhEo)'},
-                { name: 'Example Ghost lobby in D2', value: '[Watch video](https://www.youtube.com/watch?v=92-SDZ4SR5Q)'}
-            )
-            .setColor('#ffcc00')
-            .setThumbnail('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/Cheese_Icon.png')
-            .setImage('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/GhostLobbies.png')
-            .setTimestamp()
-            message.channel.send(embed);
-        }
-    }
-
-    // Trials
-    if (message.channel.id === channelID) {
-        if(helpArgs[0] === 'trials') {
-            const embed = new Discord.MessageEmbed()
-            .setAuthor('Cheesing in Destiny 2')
-            .setDescription('Trials Cheesing can be accomplished on any platform. It is most successfully done on platforms with lower number of players in the matchmaking pool (e.g. Stadia)')
-            .setColor('#ffcc00')
-            .setThumbnail('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/Cheese_Icon.png')
-            .setImage('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/TrialsCheese.png')
-            .setTimestamp()
-            message.channel.send(embed);
-        }
-    }
-
     // OOB
     if (message.channel.id === channelID) {
         if(helpArgs[0] === 'oob') {
@@ -70,10 +39,10 @@ module.exports.run = async (client, message, args) => {
         if(helpArgs[0] === 'discords') {
             const embed = new Discord.MessageEmbed()
             .setAuthor('Cheesing in Destiny 2')
-            .setDescription('There are many Discord Communities that help players find like minded people to cheese with. Most of them are private due to constant raids/distruption by trolls. The following Discords are compliant with Bungie/Discord/Steam ToS, and are recommended by Falcon Gaming.')
+            .setDescription('There are many Discord Communities that help players find like minded people to cheese with. The following Discords are compliant with Bungie/Discord/Steam ToS, and are recommended by Falcon Gaming.')
             .addFields(
                 { name: '<a:Stranger:781024999087276043> RaidSecrets', value: 'The official Discord of /r/RaidSecrets. Mostly Encounter/Boss Mechanic Cheeses, Loadout Exploits, OOBs, and Datamining. [Discord Invite](https://discord.gg/KPvx6xxHdz)'},
-                { name: '<a:Shaxx:781027382176907264> Host Haven', value: 'One of the largest, oldest, and most extremely well organized communities dedicated to PVP related cheesing activities. It has constantly been a target of toxic influencers, and is an invite only Discord. Falcon Gaming has partnered with Host Haven to give our members exclusive access to this community. DM a Destiny 2 Moderator for a one time invite link.'},
+                { name: '<a:Shaxx:781027382176907264> Host Haven', value: 'One of the largest, oldest, and most extremely well organized communities dedicated to cheesing activities.[Discord Invite](https://discord.gg/mp3snuy9hZ)'},
                 { name: '<a:Sweeper:781027382436954122> Triumph Cheesing', value: 'As the name suggests, this is a Steam based community dedicated to helping players cheese hard to earn triumphs. [Discord Invite](https://discord.gg/fuxUKEqvWn)'}
             )
             .setColor('#ffcc00')
@@ -94,8 +63,6 @@ module.exports.run = async (client, message, args) => {
         .setThumbnail('https://destiny2.falcon-gaming.net/wp-content/uploads/cheesing/Cheese_Icon.png')
         .addFields(
             { name: '101', value: 'Learn about the cheesing culture in Destiny 2'},
-            { name: 'GhostLobby', value: 'Learn about Ghost Lobbies'},
-            { name: 'Trials', value: 'Learn about how to do Ghost Lobbies in Trials'},
             { name: 'OOB', value: 'Learn about the practice of going Out of Bounds.'},
             { name: 'Discords', value: 'Learn about Discord communities dedicated to cheesing.'}
         )
@@ -107,7 +74,7 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.config = {
     name: "cheese",
-    description: "Supports the following parameters (101, GhostLobby)",
+    description: "Supports the following parameters (101, OOB, Discords)",
     usage: "!cheese || !cheese <param>",
     accessableby: "Members",
     aliases: []

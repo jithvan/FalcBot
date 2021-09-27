@@ -2,11 +2,11 @@ const Discord = require('discord.js');
 const got = require('got');
 
 module.exports.run = async (client, message, args) => {
-    //We have to set a argument for the help command beacuse its going to have a seperate argument.
+    // Adds support for a seperate argument.
     let helpArray = message.content.split(" ");
     let helpArgs = helpArray.slice(1);
 
-    //Custom Help command by using the second argument.
+    // Pulls random post from the Genshin Memes Subreddit.
     if(helpArgs[0] === 'genshin') {
         const embed = new Discord.MessageEmbed()
         got('https://www.reddit.com/r/Genshin_Memepact/random/.json').then(response => {
@@ -27,10 +27,31 @@ module.exports.run = async (client, message, args) => {
         })
     }
 
-    //Custom Help command by using the second argument.
+    // Pulls random post from the Destiny Memes Subreddit.
     if(helpArgs[0] === 'destiny') {
         const embed = new Discord.MessageEmbed()
         got('https://www.reddit.com/r/DestinyMemes/random/.json').then(response => {
+            let content = JSON.parse(response.body);
+            let permalink = content[0].data.children[0].data.permalink;
+            let memeUrl = `https://reddit.com${permalink}`;
+            let memeImage = content[0].data.children[0].data.url;
+            let memeTitle = content[0].data.children[0].data.title;
+            let memeUpvotes = content[0].data.children[0].data.ups;
+            let memeDownvotes = content[0].data.children[0].data.downs;
+            let memeNumComments = content[0].data.children[0].data.num_comments;
+            embed.setTitle(`${memeTitle}`)
+            embed.setURL(`${memeUrl}`)
+            embed.setImage(memeImage)
+            embed.setColor('RANDOM')
+            embed.setFooter(`👍 ${memeUpvotes} 👎 ${memeDownvotes} 💬 ${memeNumComments}`)
+            message.channel.send(embed);
+        })
+    }
+
+    // Pulls random post from the Warframe Memes Subreddit.
+    if(helpArgs[0] === 'warframe') {
+        const embed = new Discord.MessageEmbed()
+        got('https://www.reddit.com/r/warframememes/random/.json').then(response => {
             let content = JSON.parse(response.body);
             let permalink = content[0].data.children[0].data.permalink;
             let memeUrl = `https://reddit.com${permalink}`;

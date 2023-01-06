@@ -2,7 +2,7 @@ module.exports = (client) => {
   const channelId = '465920602683867136' // Welcome channel
   
   client.on('guildMemberAdd', (member) => {
-    const message = `Welcome to the server, <@${member.id}>! Visit <#465974772828864532> in order to get access to specific game channels. You need to have at least one role to be able to see public channels. If you don't play any of the games listed, send a message in <#285362769908203521> and we will help you out!`
+    const message = `Welcome to the server, <@${member.id}>! Feel free to introduce yourself in <#1061008501624811640>. Visit <#465974772828864532> in order to get access to specific game channels. If you need any help send a message in <#285362769908203521> and we will help you out!`
     client.channels.cache.get(channelId).send(message)
   })
 

@@ -9,6 +9,7 @@ module.exports = (client) => {
   const emojis = {
     PUBG: 'PUBG',
     ApexLegends: 'Apex Legends',
+    Fortnite: 'Fortnite',
   }
 
   const reactions = []

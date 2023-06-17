@@ -20,6 +20,7 @@ module.exports = (client) => {
     LostArk : 'Lost Ark',
     EldenRing : 'Elden Ring',
     TowerOfFantasy : 'Tower Of Fantasy',
+    DiabloIV : 'Diablo IV',
   }
 
   const reactions = []

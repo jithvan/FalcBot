@@ -12,6 +12,7 @@ module.exports = (client) => {
     Anthem: 'Anthem',
     TheDivision: 'The Division',
     Outriders: 'Outriders',
+    BattleBit : 'BattleBit Remastered',
   }
 
   const reactions = []

@@ -65,7 +65,7 @@ client.on('ready', () => {
   //welcomeChannels(client)
   welcomeChannelsText(client)
   //welcomeRoles(client)
-  //welcomeRolesText(client)
+  welcomeRolesText(client)
   //welcomeRolesText2(client)
   //welcomeCommands(client)
   //welcomeCommandsText(client)

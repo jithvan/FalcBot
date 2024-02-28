@@ -11,6 +11,7 @@ module.exports = (client) => {
     Minecraft: 'Minecraft',
     ARK: 'ARK Survival',
     Valheim: 'Valheim',
+    Trove: 'Trove',
   }
 
   const reactions = []

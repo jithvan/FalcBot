@@ -9,9 +9,6 @@ module.exports = (client) => {
   const emojis = {
     Destiny2: 'Destiny 2',
     Warframe: 'Warframe',
-    Anthem: 'Anthem',
-    TheDivision: 'The Division',
-    Outriders: 'Outriders',
     BattleBit : 'BattleBit Remastered',
   }
 

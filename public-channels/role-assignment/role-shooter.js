@@ -18,6 +18,7 @@ module.exports = (client) => {
     Valorant: 'Valorant',
     Tarkov: 'Escape from Tarkov',
     PlanetSide2: 'PlanetSide 2',
+    DeltaForce: 'Delta Force',
   }
 
   const reactions = []

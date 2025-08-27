@@ -34,7 +34,7 @@ module.exports = (client) => {
         }
 
         if (message.content.includes("peterbot")) {
-          message.channel.send("", {files: ["https://media.discordapp.net/attachments/863577287672856626/1406056940538171602/image0.gif?ex=68a11411&is=689fc291&hm=50108f67250a74cb166e23851cc9a6b0153bc6d645b6bf565d9ad2c28aa44bd3&="]});
+          message.channel.send("", {files: ["https://media1.tenor.com/m/FkY1FWL_NkwAAAAC/reload-shotgun.gif"]});
           if (Math.random() < .5) {
                 message.channel.send("https://youtu.be/kwdARLmSgUk?si=WkuzNMmWLVVWSNVH");
             }

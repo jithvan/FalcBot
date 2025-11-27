@@ -21,6 +21,7 @@ module.exports = (client) => {
     EldenRing : 'Elden Ring',
     TowerOfFantasy : 'Tower Of Fantasy',
     DiabloIV : 'Diablo IV',
+    SoulFrame : 'SoulFrame',
   }
 
   const reactions = []

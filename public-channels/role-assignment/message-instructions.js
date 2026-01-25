@@ -1,17 +1,20 @@
-module.exports = async (client, id, text, reactions = []) => {
-  const channel = await client.channels.fetch(id)
+module.exports = async (client, channelId, text, reactions = []) => {
+  const channel = await client.channels.fetch(channelId);
 
-  channel.messages.fetch().then((messages) => {
-    if (messages.size === 0) {
-      // Send a new message
-      channel.send(text)
-    } else {
-      // Edit the existing message
-      for (const message of messages) {
-        if (message[0] === '806691297016152074') {
-          message[1].edit(text)
-        }
-      }
-    }
-  })
-}
+  if (!text || typeof text !== 'string') return;
+
+  try {
+    const message = await channel.messages.fetch('806691297016152074');
+
+    // Make sure the bot owns the message
+    if (message.author.id !== client.user.id) return;
+
+    await message.edit({ content: text });
+  } catch (err) {
+    // Message doesn't exist → send a new one
+    const sent = await channel.send({ content: text });
+
+    // Optional: save sent.id somewhere instead of hardcoding
+    console.log('New message sent:', sent.id);
+  }
+};

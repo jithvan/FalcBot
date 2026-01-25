@@ -12,7 +12,7 @@ module.exports = async (client, channelId, text, reactions = []) => {
     await message.edit({ content: text });
   } catch (err) {
     // Message doesn't exist → send a new one
-    const sent = await channel.send({ content: text });
+    // const sent = await channel.send({ content: text });
 
     // Optional: save sent.id somewhere instead of hardcoding
     console.log('New message sent:', sent.id);

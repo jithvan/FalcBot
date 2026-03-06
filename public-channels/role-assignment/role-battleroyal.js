@@ -10,6 +10,7 @@ module.exports = (client) => {
     PUBG: 'PUBG',
     ApexLegends: 'Apex Legends',
     Fortnite: 'Fortnite',
+    ARCRaiders: 'ARC Raiders',
   }
 
   const reactions = []

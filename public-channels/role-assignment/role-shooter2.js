@@ -10,6 +10,7 @@ module.exports = (client) => {
     Destiny2: 'Destiny 2',
     Warframe: 'Warframe',
     BattleBit : 'BattleBit Remastered',
+    TheFirstDescendant : 'The First Descendant',
   }
 
   const reactions = []

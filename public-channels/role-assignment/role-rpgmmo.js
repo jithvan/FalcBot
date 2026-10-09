@@ -15,13 +15,14 @@ module.exports = (client) => {
     DarkSouls : 'Dark Souls',
     StarCitizen : 'Star Citizen',
     FinalFantasy : 'Final Fantasy',
-    NewWorld : 'New World',
     BitCraft : 'BitCraft',
     LostArk : 'Lost Ark',
     EldenRing : 'Elden Ring',
     AdventureQuest : 'AdventureQuest',
     DiabloIV : 'Diablo IV',
     SoulFrame : 'SoulFrame',
+    Aion2 : 'Aion 2',
+    WorldofWarcraft : 'World of Warcraft',
   }
 
   const reactions = []
